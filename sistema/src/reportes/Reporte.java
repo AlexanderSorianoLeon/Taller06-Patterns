@@ -1,6 +1,8 @@
 package reportes;
 
-public class Reporte {
+import reportepersonalizado.PersonalizarReporte;
+
+public class Reporte implements PersonalizarReporte {
     private String titulo;
     private String contenido;
 
@@ -23,6 +25,11 @@ public class Reporte {
 
     public void setContenido(String contenido) {
         this.contenido = contenido;
+    }
+
+    public String personalizarReporte() {
+        // logig
+        return "reporte decorado";
     }
 
 }
